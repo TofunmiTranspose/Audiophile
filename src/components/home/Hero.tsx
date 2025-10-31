@@ -2,11 +2,13 @@ import { assets } from "../../assets/assets";
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden h-[90vh] dark1 grid grid-cols-2">
-      <div className="text-white">
+    <div className="relative overflow-hidde h-[90vh] dark1 grid md:grid-cols-2">
+      <div className=" text-white z-1 flex flex-col gap-2 items-center md:items-start justify-center px-10 pb-10">
         <h3 className="opacity-50">NEW PRODUCT</h3>
-        <h1 className="uppercase">XX99 Mark II Headphones</h1>
-        <p>
+        <h1 className="uppercase text-2xl sm:text-3xl md:text-5xl font-bold">
+          XX99 Mark II Headphones
+        </h1>
+        <p className="text-center md:text-left">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
@@ -14,10 +16,10 @@ const Hero = () => {
           SEE PRODUCT
         </button>
       </div>
-      <div className="flex-1 justify-center items-center w-full h-full">
+      <div className="overflow-hidden absolute md:static z-0 flex md:p-5 justify-center items-center w-full my-auto h-full w-full">
         <img
           src={assets.headphone}
-          className="object-center object-cover h-full"
+          className="object-center  object-contain w-full h-full"
         />
       </div>
     </div>

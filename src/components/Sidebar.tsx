@@ -8,8 +8,8 @@ const Sidebar = ({
 }) => {
   return (
     <div
-      className={`h-screen fixed top-0 left-0 dark1 w-64 border-r-2 border-[#d87d4a] text-white flex flex-col items-center pt-10 ${
-        sidebar.isOpen ? "block" : "hidden"
+      className={`h-screen z-100 fixed top-0 left-0 dark1 w-64 border-r-2 border-[#d87d4a] text-white flex flex-col items-center pt-10 ${
+        sidebar.isOpen ? "block md:hidden" : "hidden"
       }`}
     >
       <IoMdCloseCircleOutline

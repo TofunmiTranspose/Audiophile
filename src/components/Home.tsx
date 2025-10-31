@@ -2,7 +2,7 @@ import Hero from "./home/Hero";
 
 const Home = () => {
   return (
-    <div className="bg-white pb-10">
+    <div className="bg-whit pb-10">
       <Hero />
     </div>
   );

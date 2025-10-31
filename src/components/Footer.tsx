@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="manrope dark1 py-15 pl-25 pr-40 border border-white flex flex-col gap-5 justify-center items-center">
+    <div className="manrope dark1 py-15 pl-25 pr-40 flex flex-col gap-5 justify-center items-center">
       <div className="w-full text-white flex justify-between items-center">
         <h1 className="font-extrabold text-2xl manrope flex items-center gap-5 sm:gap-8">
           <Link to={"/"}>audiophile</Link>
