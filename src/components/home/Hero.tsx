@@ -16,10 +16,10 @@ const Hero = () => {
           SEE PRODUCT
         </button>
       </div>
-      <div className="overflow-hidden absolute md:static z-0 flex md:p-5 justify-center items-center w-full my-auto h-full w-full">
+      <div className="overflow-hidden absolute md:static z-0 flex md:p-5 justify-center items-center w-full my-auto h-full w-full bg-[#0e0e0e] md:bg-transparent">
         <img
           src={assets.headphone}
-          className="object-center  object-contain w-full h-full"
+          className="object-center brightness-70 md:brightness-100 object-contain w-full h-full"
         />
       </div>
     </div>

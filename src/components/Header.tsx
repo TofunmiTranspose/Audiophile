@@ -14,7 +14,7 @@ const Header = ({
         <h1 className="font-extrabold text-2xl manrope flex items-center gap-5 sm:gap-8">
           <LuMenu
             onClick={sidebar.toggleSidebar}
-            size={25}
+            size={28}
             className="md:hidden cursor-pointer"
           />
           <Link to={"/"}>audiophile</Link>
