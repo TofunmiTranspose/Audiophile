@@ -1,11 +1,12 @@
 import { IoMdCloseCircleOutline } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = ({
   sidebar,
 }: {
   sidebar: { isOpen: boolean; toggleSidebar: () => void };
 }) => {
+  const tab = useLocation();
   return (
     <div
       className={`h-screen z-100 fixed top-0 left-0 dark1 w-64 border-r-2 border-[#d87d4a] text-white flex flex-col items-center pt-10 ${
@@ -17,11 +18,16 @@ const Sidebar = ({
         onClick={sidebar.toggleSidebar}
         className="absolute top-5 right-4 hover:text-[#d87d4a] cursor-pointer transition ease-in-out duration-300"
       />
-      <ul className="flex flex-col pt-5 manrope font-bold text-sm gap-8 uppercase">
+      <ul className="flex flex-col pt-5 manrope font-bold gap-8 uppercase">
         {["Home", "HEADPHONES", "SPEAKERS", "EARPHONES"].map((item) => (
           <li
             key={item}
-            className="text-white hover:text-[#d87d4a] transition ease-in-out duration-300"
+            className={`${
+              tab.pathname.slice(1, 100) === item.toLowerCase() ||
+              (tab.pathname === "/" && item.toLowerCase() === "home")
+                ? "text-[#d87d4a]"
+                : "text-white"
+            } hover:text-[#d87d4a] transition ease-in-out duration-300`}
           >
             <Link
               to={
