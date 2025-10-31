@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./components/Home";
+import Headphones from "./components/headphone/Headphones";
+import Speakers from "./components/speakers/Speakers";
+import Earphones from "./components/earphones/Earphones";
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Routes>
         <Route path="" element={<RootLayout />}>
           <Route index element={<Home />} />
+          <Route path="headphones" element={<Headphones />} />
+          <Route path="speakers" element={<Speakers />} />
+          <Route path="earphones" element={<Earphones />} />
           <Route
             path="*"
             element={
