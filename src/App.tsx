@@ -1,13 +1,25 @@
-import { FaHome } from "react-icons/fa";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RootLayout from "./layouts/RootLayout";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="font-bold text-4xl flex gap-2">
-      Hello TSX{" "}
-      <span className="text-green-500">
-        <FaHome />
-      </span>{" "}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="" element={<RootLayout />}>
+          <Route index element={<Home />} />
+          <Route
+            path="*"
+            element={
+              <div className="dark1 h-[90vh] text-white text-5xl font-bold flex justify-center items-center">
+                NOT FOUND
+              </div>
+            }
+          />
+        </Route>
+        <Route path="*" element={<div>NOT FOUND</div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
