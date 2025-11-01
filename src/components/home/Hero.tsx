@@ -1,4 +1,5 @@
 import { assets } from "../../assets/assets";
+import Button from "../../utils/Button";
 
 const Hero = () => {
   return (
@@ -12,9 +13,7 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button className="bg-[#d87d4a] hover:bg-[#fbaf85] h-12 w-40 flex items-center justify-center font-bold transition duration-300 ease cursor-pointer">
-          SEE PRODUCT
-        </button>
+        <Button />
       </div>
       <div className="overflow-hidden absolute md:static z-0 flex md:p-5 justify-center items-center w-full my-auto h-full w-full bg-[#0e0e0e] md:bg-transparent">
         <img
