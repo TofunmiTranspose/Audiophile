@@ -1,8 +1,13 @@
-const Button2 = () => {
+import { Link } from "react-router-dom";
+
+const Button2 = ({ link }: { link: string }) => {
   return (
-    <button className="border-2 h-12 w-40 flex items-center justify-center font-bold transition duration-300 ease cursor-pointer">
+    <Link
+      to={link}
+      className="border-2 h-12 w-40 flex items-center justify-center font-bold transition duration-300 ease cursor-pointer"
+    >
       SEE PRODUCT
-    </button>
+    </Link>
   );
 };
 

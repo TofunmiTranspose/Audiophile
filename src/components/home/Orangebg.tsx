@@ -7,8 +7,8 @@ const Orangebg = () => {
       <div className="flex justify-center">
         <img src={assets.speaker} className="h-9/10 self-end " />
       </div>
-      <div className="flex flex-col  justify-center gap-5">
-        <h1 className="text-white font-bold text-7xl">
+      <div className="flex flex-col justify-center gap-5">
+        <h1 className="text-white font-bold text-2xl md:text-7xl">
           ZX9 <br /> SPEAKER
         </h1>
         <p className="text-white/70 leading-loose">

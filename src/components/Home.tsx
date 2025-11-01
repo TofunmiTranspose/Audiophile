@@ -1,4 +1,6 @@
+import AudioGear from "../utils/AudioGear";
 import AfterOrange from "./home/AfterOrange";
+import EarphoneGrid from "./home/EarphoneGrid";
 import Hero from "./home/Hero";
 import Orangebg from "./home/Orangebg";
 import Products from "./home/Products";
@@ -12,6 +14,8 @@ const Home = () => {
           <Products />
           <Orangebg />
           <AfterOrange />
+          <EarphoneGrid />
+          <AudioGear />
         </div>
       </div>
     </div>
