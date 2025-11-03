@@ -1,8 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Product from "./Product";
 import { store } from "../../data/products";
 
 const ProductDetail = () => {
+  const navigate = useNavigate();
   const { product } = useParams();
   const productData = store.find((i) => i.name === product);
 
@@ -12,9 +13,9 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-white p-10">
-      <Link to={"-1"}>
+      <button onclick={() => navigate(-1)} >
         <p className="mb-3 font-semibold">back</p>
-      </Link>
+      </button>
       <Product data={productData} />
     </div>
   );
