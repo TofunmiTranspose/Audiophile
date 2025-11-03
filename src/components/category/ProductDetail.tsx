@@ -13,7 +13,7 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-white p-10">
-      <button onclick={() => navigate(-1)} >
+      <button onClick={() => navigate(-1)} >
         <p className="mb-3 font-semibold">back</p>
       </button>
       <Product data={productData} />
