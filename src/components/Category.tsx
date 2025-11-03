@@ -9,6 +9,7 @@ const Category = ({
     image: string;
     name: string;
     text: string;
+    type: string;
   }[];
 }) => {
   return (
