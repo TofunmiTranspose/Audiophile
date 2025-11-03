@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-y-20 md:space-y-0">
+    <div className="pt-20 grid sm:grid-cols-2 md:grid-cols-3 gap-5 space-y-20 md:space-y-0">
       {[assets.headphone1, assets.speaker, assets.earbud1].map(
         (item, index) => (
           <div

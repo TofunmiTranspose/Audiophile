@@ -1,7 +1,12 @@
+import Category from "../Category";
+import Header from "../category/Header";
+import { data } from "./data";
+
 const Headphones = () => {
   return (
-    <div className="min-h-screen dark1 text-white text-5xl font-bold flex justify-center items-center">
-      Headphones
+    <div className="">
+      <Header />
+      <Category data={data} />
     </div>
   );
 };

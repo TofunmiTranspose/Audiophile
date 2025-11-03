@@ -20,7 +20,6 @@ import earbud1 from "./earbud1.png";
 import headphone from "./headphone.png";
 import headphone1 from "./headphone1.png";
 import headphone2 from "./headphone2.png";
-import headphone3 from "./headphone3.png";
 import headphone4 from "./headphone4.png";
 import man from "./man.png";
 import speaker from "./speaker.png";
@@ -50,7 +49,6 @@ export const assets = {
   headphone,
   headphone1,
   headphone2,
-  headphone3,
   headphone4,
   man,
   speaker,
