@@ -2,13 +2,15 @@ import { useLocation } from "react-router-dom";
 import Button from "../../utils/Button";
 
 const Product = ({
+  order = 1,
   data,
 }: {
+  order?: number;
   data: {
     image: string;
     name: string;
     text: string;
-    order: number;
+    price?: string;
   };
 }) => {
   const location = useLocation().pathname;
@@ -16,7 +18,7 @@ const Product = ({
     <div className="grid grid-cols-2 gap-20">
       <div
         className={`order-${
-          data.order + 1
+          order + 1
         } flex-1 items-center justify-center bg-black/4  rounded p-10`}
       >
         <img src={data.image} className=" max-h-90 mx-auto" />
@@ -30,6 +32,7 @@ const Product = ({
           <span>{location.slice(1, 100).toUpperCase()}</span>{" "}
         </h2>
         <p className="text-base text-black/50 leading-relaxed">{data.text}</p>
+        {data.price && <p className="font-bold">$ {data.price}</p>}
         <Button link={`${location}/${data.name.trim()}`} />
       </div>
     </div>

@@ -16,7 +16,7 @@ const Category = ({
       <div className="w-17/20 space-y-20">
         {data &&
           data.map((item, index) => (
-            <Product key={index} data={{ ...item, order: index % 2 }} />
+            <Product key={index} order={index % 2} data={item} />
           ))}
         <Products />
         <AudioGear />

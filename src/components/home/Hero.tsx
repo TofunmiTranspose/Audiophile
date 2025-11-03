@@ -13,7 +13,7 @@ const Hero = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <Button />
+        <Button link="/headphones" />
       </div>
       <div className="overflow-hidden absolute md:static z-0 flex md:p-5 justify-center items-center w-full my-auto h-full w-full bg-[#0e0e0e] md:bg-transparent">
         <img
