@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Button from "../../utils/Button";
 
 const Product = ({
@@ -11,9 +11,11 @@ const Product = ({
     name: string;
     text: string;
     price?: string;
+    type: string;
   };
 }) => {
-  const location = useLocation().pathname;
+  console.log(useParams());
+
   return (
     <div className="grid grid-cols-2 gap-20">
       <div
@@ -29,11 +31,11 @@ const Product = ({
         </p>
         <h2 className="font-bold text-4xl uppercase leading-tight">
           <span>{data.name}</span> <br />{" "}
-          <span>{location.slice(1, 100).toUpperCase()}</span>{" "}
+          <span>{data.type?.toUpperCase()}</span>{" "}
         </h2>
         <p className="text-base text-black/50 leading-relaxed">{data.text}</p>
         {data.price && <p className="font-bold">$ {data.price}</p>}
-        <Button link={`${location}/${data.name.trim()}`} />
+        <Button link={`/${data.type}/${data.name.trim()}`} />
       </div>
     </div>
   );
