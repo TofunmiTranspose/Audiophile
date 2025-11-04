@@ -50,29 +50,44 @@ const Product = ({
       setCart((cart ?? []).filter((item) => item.name !== data.name));
     }
   };
+  console.log(product);
 
   return (
-    <div className="grid grid-cols-2 gap-20">
+    <div className="grid sm:grid-cols-2 gap-5 md:gap-20">
       <div
-        className={`order-${
-          order && order + 2
-        } flex-1 items-center justify-center bg-black/4  rounded p-10`}
+        className={`${
+          order === 0 ? `` : `${product === undefined ? "sm:order-3" : ""}`
+        } flex-1 items-center justify-center bg-black/4  rounded p-5 md:p-10`}
       >
-        <img src={data.image} className=" max-h-90 mx-auto" />
+        <img src={data.image} className="max-h-50 md:max-h-90 mx-auto" />
       </div>
-      <div className={`order-2 flex flex-col justify-center gap-5`}>
-        <p className="secondary manrope text-sm font-bold tracking-[0.5em]">
+      <div className={`order-2 flex flex-col justify-center gap-4 md:gap-5`}>
+        <p
+          className={`primary ${
+            product === undefined ? "text-center" : " text-left"
+          } sm:text-left text-sm font-bold tracking-[0.5em]`}
+        >
           NEW PRODUCT
         </p>
-        <h2 className="font-bold text-4xl uppercase leading-tight">
+        <h2
+          className={`font-bold text-3xl md:text-4xl  ${
+            product === undefined ? "text-center" : " text-left"
+          } sm:text-left uppercase leading-tight`}
+        >
           <span>{data.name}</span> <br />{" "}
           <span>{data.type?.toUpperCase()}</span>{" "}
         </h2>
-        <p className="text-base text-black/50 leading-relaxed">{data.text}</p>
+        <p
+          className={`${
+            product === undefined ? "text-center" : " text-left"
+          } sm:text-left text-base md:text-base text-black/50 leading-relaxed`}
+        >
+          {data.text}
+        </p>
         {product && data.price && <p className="font-bold">$ {data.price}</p>}
         <div className="flex items-center gap-5">
           {product && (
-            <div className="bg-gray-100 rounded-sm grid grid-cols-3 place-items-center h-12">
+            <div className="bg-gray-100 grid grid-cols-3 place-items-center h-12 w-full max-w-[130px]">
               <button
                 onClick={handleDecrement}
                 className="px-3.5 hover:bg-gray-200 h-full flex items-center justify-center font-semibold"
@@ -90,7 +105,22 @@ const Product = ({
               </button>
             </div>
           )}
-          <Button link={`/${data.type}/${data.name.trim()}`} />
+          <div
+            className={`w-full flex  ${
+              product === undefined
+                ? "justify-center sm:justify-start"
+                : " justify-start"
+            }`}
+          >
+            <Button
+              text={product === undefined ? "SEE PRODUCT" : "ADD TO CART"}
+              link={
+                product === undefined
+                  ? `/${data.type}/${data.name.trim()}`
+                  : handleIncrement
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

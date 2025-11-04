@@ -18,11 +18,13 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="bg-white p-10">
+    <div className="bg-white py-5 md:p-10">
       <button onClick={() => navigate(-1)}>
-        <p className="mb-3 font-semibold cursor-pointer">Go back</p>
+        <p className="mb-3 font-semibold cursor-pointer ml-4 md:ml-0 text-sm md:text-base">
+          Go back
+        </p>
       </button>
-      <div className="space-y-20">
+      <div className="space-y-20 w-9/10 md:w-full mx-auto">
         <Product data={productData} />
         <Products />
         <AudioGear />
