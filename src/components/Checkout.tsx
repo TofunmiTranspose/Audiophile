@@ -1,4 +1,4 @@
-import { use, useState, type FormEvent } from "react";
+import { use, useEffect, useState, type FormEvent } from "react";
 import { CartContext } from "../context/Cart";
 import { useNavigate } from "react-router-dom";
 import Form from "./checkout/Form";
@@ -6,6 +6,9 @@ import Summary from "./checkout/Summary";
 import { FaCheck } from "react-icons/fa";
 
 const Checkout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const { setShow, cart } = use(CartContext);
   setShow(false);
   const navigate = useNavigate();

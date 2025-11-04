@@ -7,8 +7,8 @@ const EarphoneGrid = () => {
       <div className="flex items-center justify-center rounded-lg">
         <img src={assets.earbud} className="rounded-lg" />
       </div>
-      <div className="bg-black/5 rounded-lg">
-        <LinkCol detail={{ title: "YX1 EARPHONES", link: "" }} />
+      <div className="bg-black/5 rounded-lg p-6 md:p-0">
+        <LinkCol detail={{ title: "YX1 EARPHONES", link: "/earphones" }} />
       </div>
     </div>
   );

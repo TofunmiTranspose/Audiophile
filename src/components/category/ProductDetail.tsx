@@ -3,8 +3,12 @@ import Product from "./Product";
 import { store } from "../../data/products";
 import AudioGear from "../../utils/AudioGear";
 import Products from "../home/Products";
+import { useEffect } from "react";
 
 const ProductDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const navigate = useNavigate();
   const { product } = useParams();
   const productData = store.find((i) => i.name === product);

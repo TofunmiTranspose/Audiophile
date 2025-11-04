@@ -50,7 +50,6 @@ const Product = ({
       setCart((cart ?? []).filter((item) => item.name !== data.name));
     }
   };
-  console.log(order);
 
   return (
     <div className="grid grid-cols-2 gap-20">
