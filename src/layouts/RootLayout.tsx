@@ -2,12 +2,13 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { use, useState } from "react";
 import Cart from "../components/CartPage";
+import { CartContext } from "../context/Cart";
 
 const RootLayout = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(false);
+  const { show, setShow } = use(CartContext);
   const toggleSidebar = () => setIsOpen(!isOpen);
   return (
     <div className="dark1">

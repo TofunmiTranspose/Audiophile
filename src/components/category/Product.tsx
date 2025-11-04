@@ -4,7 +4,7 @@ import { CartContext } from "../../context/Cart";
 import { useParams } from "react-router-dom";
 
 const Product = ({
-  order = 1,
+  order,
   data,
 }: {
   order?: number;
@@ -50,17 +50,18 @@ const Product = ({
       setCart((cart ?? []).filter((item) => item.name !== data.name));
     }
   };
+  console.log(order);
 
   return (
     <div className="grid grid-cols-2 gap-20">
       <div
         className={`order-${
-          order + 1
+          order && order + 2
         } flex-1 items-center justify-center bg-black/4  rounded p-10`}
       >
         <img src={data.image} className=" max-h-90 mx-auto" />
       </div>
-      <div className="order-1 flex flex-col justify-center gap-5">
+      <div className={`order-2 flex flex-col justify-center gap-5`}>
         <p className="secondary manrope text-sm font-bold tracking-[0.5em]">
           NEW PRODUCT
         </p>
@@ -98,4 +99,3 @@ const Product = ({
 };
 
 export default Product;
-/* { cart: Math.max(cart?.cart ?? 0, 1) - 1 } */
