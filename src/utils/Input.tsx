@@ -20,7 +20,7 @@ const Input = ({
         type={type}
         id={id}
         placeholder={placeholder}
-        className="border border-gray-200 rounded md:rounded-lg p-2"
+        className="border border-gray-200 rounded md:rounded-lg p-2 w-full"
       />
     </div>
   );

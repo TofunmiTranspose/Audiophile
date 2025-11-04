@@ -9,7 +9,6 @@ const Cart = ({
 }) => {
   const { cart, setCart } = use(CartContext);
   const reset = () => setCart(null);
-  console.log(cart);
 
   const handleDecrement = (me: CartType) => {
     if (me && me.quantity > 1) {
@@ -65,11 +64,11 @@ const Cart = ({
               {cart?.map((cart, i) => (
                 <div key={i} className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
-                    <div className="bg-gray-100 p-1.5 rounded">
+                    <div className="bg-gray-100 p-2 rounded-md">
                       <img src={cart.image} className="size-9 object-contain" />
                     </div>
                     <div className="flex flex-col justify-center gap-1">
-                      <p className="font-bold">{cart.name}</p>
+                      <p className="font-bold text-sm">{cart.name}</p>
                       <p className="text-gray-500 font-semibold text-xs">
                         $ {cart.price}
                       </p>

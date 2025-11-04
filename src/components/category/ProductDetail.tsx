@@ -16,7 +16,7 @@ const ProductDetail = () => {
   return (
     <div className="bg-white p-10">
       <button onClick={() => navigate(-1)}>
-        <p className="mb-3 font-semibold">Go back</p>
+        <p className="mb-3 font-semibold cursor-pointer">Go back</p>
       </button>
       <div className="space-y-20">
         <Product data={productData} />
